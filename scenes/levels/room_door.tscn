@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://idcl063cs6kg"]
+
+[ext_resource type="Script" uid="uid://ct3hn6jshuw1y" path="res://scenes/levels/room_door.gd" id="1_fblhh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkk0h"]
+size = Vector2(60, 58)
+
+[node name="RoomDoor" type="Node2D" unique_id=744298418]
+script = ExtResource("1_fblhh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1508873238]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1327404320]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=450951584]
+shape = SubResource("RectangleShape2D_gkk0h")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

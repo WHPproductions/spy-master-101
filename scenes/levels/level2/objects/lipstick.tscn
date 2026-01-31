@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bf1f2760vq7fg"]
+
+[ext_resource type="PackedScene" uid="uid://7rpu2x8slpml" path="res://scenes/levels/env_object.tscn" id="1_cmo4y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmo4y"]
+
+[node name="Lipstick" unique_id=1649554266 instance=ExtResource("1_cmo4y")]
+sprite_frames = SubResource("SpriteFrames_cmo4y")
+script = null

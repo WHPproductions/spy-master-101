@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://7rpu2x8slpml"]
+
+[ext_resource type="Script" uid="uid://5omvb33jugjh" path="res://scenes/levels/env_object.gd" id="1_kiam1"]
+
+[node name="EnvObject" type="AnimatedSprite2D" unique_id=1649554266]
+script = ExtResource("1_kiam1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=314934616]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1672685848]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1007089019]
+
+[node name="Dialogue" type="Node2D" parent="." unique_id=357490095]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

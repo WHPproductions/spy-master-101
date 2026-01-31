@@ -1,0 +1,66 @@
+[gd_resource type="Theme" format=3 uid="uid://4sxgxtrde5wq"]
+
+[ext_resource type="FontFile" uid="uid://chnlralymfnmp" path="res://assets/HUD/fonts/pixeloid_sans/PixeloidSans.ttf" id="1_b4fxc"]
+[ext_resource type="Texture2D" uid="uid://b3jhfct5hkggb" path="res://assets/UI/ui.png" id="1_beu1l"]
+[ext_resource type="FontFile" uid="uid://dwhj0kb5n8nqp" path="res://assets/HUD/fonts/pixeloid_sans/PixeloidSans-Bold.ttf" id="3_dnvte"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_535mg"]
+atlas = ExtResource("1_beu1l")
+region = Rect2(112, 38, 44, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b4fxc"]
+texture = SubResource("AtlasTexture_535mg")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_beu1l"]
+atlas = ExtResource("1_beu1l")
+region = Rect2(112, 38, 44, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_535mg"]
+texture = SubResource("AtlasTexture_beu1l")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4fxc"]
+atlas = ExtResource("1_beu1l")
+region = Rect2(112, 57, 44, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dnvte"]
+texture = SubResource("AtlasTexture_b4fxc")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxg0b"]
+atlas = ExtResource("1_beu1l")
+region = Rect2(0, 0, 45, 45)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_digwv"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = SubResource("AtlasTexture_dxg0b")
+texture_margin_left = 6.0
+texture_margin_top = 9.0
+texture_margin_right = 6.0
+texture_margin_bottom = 9.0
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[resource]
+Button/fonts/font = ExtResource("1_b4fxc")
+Button/styles/hover = SubResource("StyleBoxTexture_b4fxc")
+Button/styles/normal = SubResource("StyleBoxTexture_535mg")
+Button/styles/pressed = SubResource("StyleBoxTexture_dnvte")
+Panel/styles/panel = SubResource("StyleBoxTexture_digwv")
+RichTextLabel/fonts/bold_font = ExtResource("3_dnvte")
+RichTextLabel/fonts/normal_font = ExtResource("1_b4fxc")

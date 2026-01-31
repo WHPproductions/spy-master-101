@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dqxgnc7sixu4l"]
+
+[ext_resource type="PackedScene" uid="uid://dyn4spp8crd8g" path="res://scenes/levels/level_template.tscn" id="1_ksju7"]
+[ext_resource type="Texture2D" uid="uid://yjybpi765fbu" path="res://assets/Level/receptionist/lvl1_bg.png" id="2_x42e6"]
+[ext_resource type="Texture2D" uid="uid://dea0qaj4jcjrt" path="res://assets/Level/receptionist/objects_n.png" id="3_6761a"]
+[ext_resource type="Texture2D" uid="uid://7w0228rpc4cg" path="res://assets/Object/light.png" id="4_sk5k4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sk5k4"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_oc4kc"]
+diffuse_texture = ExtResource("2_x42e6")
+normal_texture = ExtResource("3_6761a")
+
+[node name="Level1" unique_id=1105681423 instance=ExtResource("1_ksju7")]
+material = SubResource("ShaderMaterial_sk5k4")
+
+[node name="Background" parent="." index="0" unique_id=669969877]
+texture = SubResource("CanvasTexture_oc4kc")
+
+[node name="CollisionPolygon2D" parent="Background/EnvorinmentCollison" parent_id_path=PackedInt32Array(1481813557) index="0" unique_id=644129222]
+polygon = PackedVector2Array(0, 0, -5, 0, -5, 102, 645, 102, 645, 0, 640, 0, 640, 78, 0, 78)
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Lightnings" parent_id_path=PackedInt32Array(1688898562) index="0" unique_id=35073678]
+position = Vector2(69, -4.285715)
+scale = Vector2(1, 1.0285715)
+color = Color(0.45882353, 0.5254902, 0.23921569, 1)
+energy = 3.0
+texture = ExtResource("4_sk5k4")
+offset = Vector2(0, 45)
+
+[node name="PointLight2D2" type="PointLight2D" parent="Background/Lightnings" parent_id_path=PackedInt32Array(1688898562) index="1" unique_id=1924954561]
+position = Vector2(212, -4.428573)
+scale = Vector2(1, 1.0428573)
+color = Color(0.45882353, 0.5254902, 0.23921569, 1)
+energy = 3.0
+texture = ExtResource("4_sk5k4")
+offset = Vector2(0, 45)
+
+[node name="PointLight2D3" type="PointLight2D" parent="Background/Lightnings" parent_id_path=PackedInt32Array(1688898562) index="2" unique_id=1889925080]
+position = Vector2(358, -4.285715)
+scale = Vector2(1, 1.0285715)
+color = Color(0.45882353, 0.5254902, 0.23921569, 1)
+energy = 2.0
+texture = ExtResource("4_sk5k4")
+offset = Vector2(0, 45)
+height = 2.0
+
+[node name="PointLight2D4" type="PointLight2D" parent="Background/Lightnings" parent_id_path=PackedInt32Array(1688898562) index="3" unique_id=1023778026]
+position = Vector2(518, -4.285715)
+scale = Vector2(1, 1.0285715)
+color = Color(0.45882353, 0.5254902, 0.23921569, 1)
+energy = 3.0
+texture = ExtResource("4_sk5k4")
+offset = Vector2(0, 45)
+height = 2.0
+
+[node name="SpawnPoint" parent="." index="4" unique_id=1589296561]
+position = Vector2(359, 77)

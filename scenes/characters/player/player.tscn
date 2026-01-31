@@ -1,7 +1,27 @@
 [gd_scene format=3 uid="uid://c132t2yc4x2dl"]
 
+[ext_resource type="Script" uid="uid://rnqnvmlr6s4o" path="res://scenes/characters/player/player.gd" id="1_7uws0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bcx1r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7uws0"]
+size = Vector2(20, 40)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7uws0"]
+polygon = PackedVector2Array(9, -20, -11, -20, -11, 20, 9, 20)
+
 [node name="Player" type="CharacterBody2D" unique_id=1768859486]
+script = ExtResource("1_7uws0")
+speed = 80.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=479029089]
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=716508117]
+sprite_frames = SubResource("SpriteFrames_bcx1r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=878021799]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_7uws0")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=433512621]
+occluder = SubResource("OccluderPolygon2D_7uws0")

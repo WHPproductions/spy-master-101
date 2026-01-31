@@ -1,11 +1,34 @@
 [gd_scene format=3 uid="uid://dyn4spp8crd8g"]
 
+[ext_resource type="Script" uid="uid://dsaw21fq5rx6v" path="res://scenes/levels/level_template.gd" id="1_7hipx"]
+[ext_resource type="Shader" uid="uid://c3bic8jw1u876" path="res://scenes/levels/chromatic_abberation.gdshader" id="1_eyte8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7hipx"]
+shader = ExtResource("1_eyte8")
+shader_parameter/r_displacement = Vector2(1, 0)
+shader_parameter/g_displacement = Vector2(0, 0)
+shader_parameter/b_displacement = Vector2(-1, 0)
+
 [node name="Level" type="Node2D" unique_id=1105681423]
+script = ExtResource("1_7hipx")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=669969877]
+centered = false
 
 [node name="EnvorinmentCollison" type="StaticBody2D" parent="Background" unique_id=1481813557]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/EnvorinmentCollison" unique_id=644129222]
 
+[node name="Lightnings" type="Node2D" parent="Background" unique_id=1688898562]
+
 [node name="Objects" type="Node2D" parent="." unique_id=1479348405]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1084309797]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1127246787]
+material = SubResource("ShaderMaterial_7hipx")
+offset_right = 640.0
+offset_bottom = 95.0
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=1589296561]
+unique_name_in_owner = true
