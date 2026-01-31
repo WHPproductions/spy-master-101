@@ -16,7 +16,6 @@ material = SubResource("ShaderMaterial_sk5k4")
 
 [node name="Background" parent="." index="0" unique_id=669969877]
 texture = SubResource("CanvasTexture_oc4kc")
-centered = false
 
 [node name="CollisionPolygon2D" parent="Background/EnvorinmentCollison" parent_id_path=PackedInt32Array(1481813557) index="0" unique_id=644129222]
 polygon = PackedVector2Array(0, 0, -5, 0, -5, 102, 645, 102, 645, 0, 640, 0, 640, 78, 0, 78)

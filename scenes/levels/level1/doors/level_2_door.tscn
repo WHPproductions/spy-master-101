@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c4ts3bm36bgax"]
+
+[ext_resource type="PackedScene" uid="uid://idcl063cs6kg" path="res://scenes/levels/room_door.tscn" id="1_8shr6"]
+[ext_resource type="Texture2D" uid="uid://bjgbaoufi57u0" path="res://assets/Object/lift.png" id="2_4sbiv"]
+[ext_resource type="Script" uid="uid://dyk4e8aiqculu" path="res://scenes/levels/level1/doors/level_2_door.gd" id="2_4stk7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd5ny"]
+atlas = ExtResource("2_4sbiv")
+region = Rect2(0, 0, 60, 57)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh6jc"]
+atlas = ExtResource("2_4sbiv")
+region = Rect2(60, 0, 60, 57)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pat45"]
+atlas = ExtResource("2_4sbiv")
+region = Rect2(120, 0, 60, 57)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_73i22"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yd5ny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qh6jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pat45")
+}],
+"loop": false,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Level2door" unique_id=744298418 instance=ExtResource("1_8shr6")]
+script = ExtResource("2_4stk7")
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1508873238]
+sprite_frames = SubResource("SpriteFrames_73i22")

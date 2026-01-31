@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://yjybpi765fbu" path="res://assets/Level/receptionist/lvl1_bg.png" id="2_j5ylm"]
 [ext_resource type="Texture2D" uid="uid://dea0qaj4jcjrt" path="res://assets/Level/receptionist/objects_n.png" id="3_cqhvq"]
 [ext_resource type="Texture2D" uid="uid://7w0228rpc4cg" path="res://assets/Object/light.png" id="4_ujib0"]
-[ext_resource type="PackedScene" uid="uid://7rpu2x8slpml" path="res://scenes/levels/env_object.tscn" id="5_jdoh7"]
+[ext_resource type="PackedScene" uid="uid://c4ts3bm36bgax" path="res://scenes/levels/level1/doors/level_2_door.tscn" id="6_jdoh7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sk5k4"]
 
@@ -13,17 +13,14 @@
 diffuse_texture = ExtResource("2_j5ylm")
 normal_texture = ExtResource("3_cqhvq")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_auch1"]
-
 [node name="Level1" unique_id=1105681423 instance=ExtResource("1_meqg6")]
 material = SubResource("ShaderMaterial_sk5k4")
 
 [node name="Background" parent="." index="0" unique_id=669969877]
 texture = SubResource("CanvasTexture_oc4kc")
-centered = false
 
 [node name="CollisionPolygon2D" parent="Background/EnvorinmentCollison" parent_id_path=PackedInt32Array(1481813557) index="0" unique_id=644129222]
-polygon = PackedVector2Array(0, 0, -5, 0, -5, 102, 645, 102, 645, 0, 640, 0, 640, 78, 0, 78)
+polygon = PackedVector2Array(0, 0, -5, 0, -5, 102, 645, 102, 645, 0, 640, 0, 640, 79, 0, 79)
 
 [node name="PointLight2D" type="PointLight2D" parent="Background/Lightnings" parent_id_path=PackedInt32Array(1688898562) index="0" unique_id=35073678]
 position = Vector2(69, -4.285715)
@@ -63,14 +60,12 @@ texture = ExtResource("4_ujib0")
 offset = Vector2(0, 45)
 height = 2.0
 
-[node name="EnvObject" parent="Objects" parent_id_path=PackedInt32Array(1479348405) index="0" unique_id=1649554266 instance=ExtResource("5_jdoh7")]
-position = Vector2(422, 54)
-
-[node name="CollisionShape2D" parent="Objects/EnvObject/Area2D" parent_id_path=PackedInt32Array(1649554266, 1672685848) index="0" unique_id=1007089019]
-shape = SubResource("RectangleShape2D_auch1")
+[node name="Level2door2" parent="Objects" parent_id_path=PackedInt32Array(1479348405) index="0" unique_id=744298418 instance=ExtResource("6_jdoh7")]
+position = Vector2(557, 49)
 
 [node name="Player" parent="." index="3" unique_id=1768859486 instance=ExtResource("1_s2n3o")]
 position = Vector2(359, 50)
+speed = 70.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="3" unique_id=470689967]
 position = Vector2(0, -12)
@@ -84,5 +79,3 @@ offset_bottom = 21.0
 
 [node name="SpawnPoint" parent="." index="5" unique_id=1589296561]
 position = Vector2(359, 77)
-
-[editable path="Objects/EnvObject"]
