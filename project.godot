@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Spy Master 101"
+run/main_scene="uid://c6tjmlnlawbiq"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [physics]
 
@@ -23,3 +28,4 @@ config/icon="res://icon.svg"
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
