@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dyn4spp8crd8g"]
+
+[node name="Level" type="Node2D" unique_id=1105681423]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=669969877]
+
+[node name="EnvorinmentCollison" type="StaticBody2D" parent="Background" unique_id=1481813557]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/EnvorinmentCollison" unique_id=644129222]
+
+[node name="Objects" type="Node2D" parent="." unique_id=1479348405]
